@@ -52,7 +52,7 @@ $(document).ready(function(){
     var index = $(this).attr('data-chara') * 1;
     push(characters[index-1], index);
   });
-  $('.btn.BtnShare').on('click',function(){
+  $('.btn.BtnShare:eq(0)').on('click',function(){
     window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title));
   });
 });
