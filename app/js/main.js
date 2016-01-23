@@ -84,5 +84,5 @@ function push(target, index){
 
 
 
-  window.history.pushState(state, target, siteUrl + '角色/' + target);
+  window.history.pushState(state, target, siteUrl + '角色/' + target +'/');
 }
