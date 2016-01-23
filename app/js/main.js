@@ -53,8 +53,7 @@ $(document).ready(function(){
     push(characters[index-1], index);
   });
   $('.btn.BtnShare').on('click',function(){
-
-    window.open('https://www.facebook.com/sharer.php?s=100&p[title]=' + document.title + '&p[summary]=' + '&p[url]=' + location.href + '&p[images][0]='); 
+    window.open('https://www.facebook.com/sharer.php?u='+encodeURIComponent(location.href)+'&t='+encodeURIComponent(document.title));
   });
 });
 function toggleCodes(on) {

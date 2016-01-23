@@ -4,7 +4,9 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
-
+*:focus{
+  outline: none;
+}
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
