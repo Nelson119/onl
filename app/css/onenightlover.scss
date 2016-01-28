@@ -35,7 +35,7 @@ $icon-font-path: '../fonts/';
     width:inherit;
     height: inherit;
     text-align: center;
-  position:absolute;
+    position:absolute;
     -webkit-transform: rotateX(0deg) rotateY(0deg);
     -webkit-transform-style: preserve-3d;
     -webkit-backface-visibility: hidden;
@@ -127,6 +127,10 @@ $icon-font-path: '../fonts/';
 }
 #movie-wrap{
   padding-top:0;
+  display: inline-block;
+  iframe{
+    position:absolute; top:0; left:0; height:110%; width: 110%;
+  }
 }
 .BackgroundCover{
   background-image:url(../img/onl-movie-cover.png);
@@ -282,7 +286,7 @@ h1 {
   width:100%;
   padding:0;
   padding-top:20px;
-  margin: 0 -10px;
+  margin: 0;
 }
 .List ul li{
   width: 70px;

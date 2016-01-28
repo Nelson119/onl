@@ -85,4 +85,30 @@ function push(target, index){
 
 
   window.history.pushState(state, target, siteUrl + '角色/' + target +'/');
+
+  $(window).on('resize', function(){
+    var ratio = 1920 / 1080;
+    var iframe = $('#movie-wrap iframe');
+    var wrap = $('#movie-wrap');
+    wrap.css('padding-top', $(window).height() / $(window).width() * 100 + '%');
+    var currentRation =  $(window).width() / $(window).height();
+    if(currentRation > ratio){
+
+      iframe.css('width','100%');
+      var h = iframe.width() / ratio;
+      var top = (h - $(window).height()) / -2;
+      iframe.css('height', h + 'px')
+        .css('margin-top', top +'px')
+        .css('margin-left', 0);
+
+    }else{
+
+      iframe.css('height','100%');
+      var w = iframe.height() * ratio;
+      var left = (w - wrap.width()) / -2;
+      iframe.css('width', w + 'px')
+        .css('margin-top', 0)
+        .css('margin-left', left + 'px');
+    }
+  }).trigger('resize');
 }
